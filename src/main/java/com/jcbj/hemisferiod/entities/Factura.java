@@ -39,6 +39,7 @@ public class Factura implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idFactura;
     @Temporal(TemporalType.DATE)
+    @ApiModelProperty(name = "fechVentaFactura", required = false, hidden = true)
     private Date fechVentaFactura;
     @ApiModelProperty(name = "articulosVendidosFactura", required = false, hidden = true)
     private int articulosVendidosFactura;

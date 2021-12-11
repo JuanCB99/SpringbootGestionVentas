@@ -57,7 +57,7 @@ public class ProductoRestController {
     
     @DeleteMapping("/{id}")
     public ResponseEntity<Producto> delete(@PathVariable Long id) {
-        return gestionVentasDomain.borrarproducto(id);
+        return gestionVentasDomain.borrarProducto(id);
     }
     
 }
