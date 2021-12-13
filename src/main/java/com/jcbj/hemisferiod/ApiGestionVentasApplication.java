@@ -23,7 +23,7 @@ public class ApiGestionVentasApplication {
         private ApiInfo apiInfo(){
         return new ApiInfoBuilder().title("API Gestion de Ventas")
                 .description("Esta es una API-REST que permite gestionar "
-                        + "los clientes, el inventario y las ventas de un negocio, mediante las operaciones basicas de CRUD.")
+                        + "los clientes, el inventario, los productos y las ventas de un negocio, mediante las operaciones basicas de CRUD.")
                 .contact(new springfox.documentation.service.Contact("Juan Bermúdez","","correo@mail.com"))
                 .license("JCBJ License")
                 .version("1.0")

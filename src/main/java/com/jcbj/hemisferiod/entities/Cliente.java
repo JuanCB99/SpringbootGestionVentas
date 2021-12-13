@@ -5,6 +5,7 @@
  */
 package com.jcbj.hemisferiod.entities;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,8 +33,11 @@ public class Cliente implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idCliente;
+    @ApiModelProperty(name = "identificaciónCliente", required = true, example = "10953045893")
     private String identificaciónCliente;
+    @ApiModelProperty(name = "nombreCliente", required = true, example = "Diego Alexander")
     private String nombreCliente;
+    @ApiModelProperty(name = "telefono", required = true, example = "3135568345")
     private String telefono;
     
     

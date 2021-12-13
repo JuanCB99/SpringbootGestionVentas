@@ -5,6 +5,7 @@
  */
 package com.jcbj.hemisferiod.entities;
 
+import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,10 +32,15 @@ public class Producto implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idProducto;
+    @ApiModelProperty(name = "nombreProducto", required = true, example = "Portatil Gamer TUF")
     private String nombreProducto;
+    @ApiModelProperty(name = "cantidadStock", required = true, example = "55")
     private int cantidadStock;
+    @ApiModelProperty(name = "tipoProducto", required = true, example = "Tecnologia")
     private String tipoProducto;
+    @ApiModelProperty(name = "marcaProducto", required = true, example = "ASUS")
     private String marcaProducto;
+    @ApiModelProperty(name = "precioProducto", required = true, example = "2780000")
     private double precioProducto;
     
 }

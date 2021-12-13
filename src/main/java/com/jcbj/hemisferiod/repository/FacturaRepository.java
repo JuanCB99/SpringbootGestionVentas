@@ -5,7 +5,9 @@
  */
 package com.jcbj.hemisferiod.repository;
 
+import com.jcbj.hemisferiod.entities.Cliente;
 import com.jcbj.hemisferiod.entities.Factura;
+import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
@@ -13,5 +15,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
  * @author Juan
  */
 public interface FacturaRepository extends JpaRepository<Factura, Long> {
+    
+    public List<Factura> findAllByClienteId(Cliente cliente);
     
 }

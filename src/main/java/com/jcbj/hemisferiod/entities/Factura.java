@@ -8,13 +8,11 @@ package com.jcbj.hemisferiod.entities;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -43,6 +41,7 @@ public class Factura implements Serializable{
     private Date fechVentaFactura;
     @ApiModelProperty(name = "articulosVendidosFactura", required = false, hidden = true)
     private int articulosVendidosFactura;
+    @ApiModelProperty(name = "totalVentaFactura", required = false, hidden = true)
     private double totalVentaFactura;
     @ManyToOne
     private Cliente clienteId;

@@ -5,8 +5,8 @@
  */
 package com.jcbj.hemisferiod.repository;
 
-import com.jcbj.hemisferiod.dto.FacturaResponse;
 import com.jcbj.hemisferiod.entities.Factura;
+import com.jcbj.hemisferiod.entities.Producto;
 import com.jcbj.hemisferiod.entities.Tiene;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -20,5 +20,7 @@ public interface TieneRepository extends JpaRepository<Tiene, Long> {
     public List<Tiene> findAllByfacturaId(Factura facturaId);
     
     public Tiene findOneByfacturaId(Factura facturaId);
+    
+    public List<Tiene> findAllByproductoId(Producto productoId);
     
 }
